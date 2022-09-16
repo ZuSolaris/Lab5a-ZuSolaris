@@ -9,7 +9,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  let mySum = a+b;
+  let mySum = a + b;
   let myStr = `The sum of ${a} and ${b} is ${mySum}.`;
   return [mySum, myStr];
 
@@ -30,15 +30,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-let myPrd = a*b;
-
+  let myPrd = a * b;
   let myStr = `The product of ${a} and ${b} is ${myPrd}.`;
   return [myPrd, myStr];
-  }
+}
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
-
+testMultiply(5, 9);
+console.log(testMultiply);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -53,13 +52,24 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a,b,c) {
+  let sum1 = sum(a, b)[0];
+  let sum2 = sum(sum1, c)[0];
+  let pdt1 = multiply(a, b)[0];
+  let pdt2 = multiply(pdt1, c)[0];
+
+  let myStr1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
+  let myStr2 = `The product of ${a} and ${b} and ${c} is ${pdt2}.`;
+console.log(myStr1);
+console.log(myStr2);
+  return [sum2, pdt2, myStr1, myStr2];
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
-
+testSumAndMultiply(4,7,5);
+sumAndMultiply(4, 7, 5);
+console.log (sumAndMultiply);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -73,11 +83,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-
-}
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -122,7 +128,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
