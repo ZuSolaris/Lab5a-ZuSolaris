@@ -37,7 +37,6 @@ function multiply(a, b) {
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5, 9);
-console.log(testMultiply);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -60,8 +59,7 @@ function sumAndMultiply(a,b,c) {
 
   let myStr1 = `${a} and ${b} and ${c} sum to ${sum2}.`;
   let myStr2 = `The product of ${a} and ${b} and ${c} is ${pdt2}.`;
-console.log(myStr1);
-console.log(myStr2);
+
   return [sum2, pdt2, myStr1, myStr2];
 
 }
@@ -69,7 +67,7 @@ console.log(myStr2);
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 sumAndMultiply(4, 7, 5);
-console.log (sumAndMultiply);
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -83,11 +81,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
+let testArray = [2, 3, 4]; 
 
+function sumArray(sumArr) {
+
+let sum1 = sum (testArray[0],testArray[1])[0];
+let sum2 = sum (sum1,testArray[2])[0];
+
+let str= `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum2} is their sum.`;
+return [sum2, str];
+}
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -102,11 +109,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+// function multiplyArray(multArr) {
 
-}
 
-// Here is the test for multiplyArray(); uncomment it to run it
+// // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
